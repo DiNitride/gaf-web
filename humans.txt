@@ -1,0 +1,15 @@
+/* TEAM */                          
+Author:  DiNitride
+Website: http://www.dinitride.win/
+From:    UK
+
+/* THANKS */				
+This File: Matt Gardner
+Website:   http://ForgotMy.Email
+From:      New York, USA
+
+                           
+/* SITE */                          
+Last update: 2017/07/17                             
+Standards: HTML
+Software: Microsoft WordPad
