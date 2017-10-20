@@ -25,6 +25,11 @@ body {
     color: white;
 }
 
+#onlineWell {
+    color: #252525;
+    padding: 8px;
+}
+
 #members {
     background: #252525;
 }

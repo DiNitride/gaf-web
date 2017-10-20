@@ -20,10 +20,9 @@
         <img src="graphics/logos/gaf-logo.jpg" class="img-circle" alt="GAF Logo" width="150" height="150">
         <h1 id="gaf" align="center">The Never Ending GAF</h1>
     </div>
-    <div class="container-fluid" id="maincontent">
+    <div class="container" id="maincontent">
         <div class="row">
             <div class="col-md-2">
-                <iframe src="https://discordapp.com/widget?id=172425299559055381&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
             </div>
             <div class="col-md-8">
                 <div class="btn-group btn-group-justified hidden-xs">
@@ -43,6 +42,7 @@
                     </div>
                 </div>
                 <br>
+                <p><b>Idiots Online: <span class="badge" id="memberCount"></span></b><br><b>Connected to Voice Chat: <span class="badge" id="voiceCount"></span></b></p>
                 <p>
                     The Never Ending GAF is a small group of idiots that play games and insult each other. We reside on our Discord server, usually in the beloved cesspool intelligently titled "Channel 1". Feel free to pop by, probably get told to piss off, and maybe play some games.
                 </p>
@@ -156,8 +156,12 @@
                             <td>Second-most virgin Pokemon Nerd in the server</td>
                         </tr>
                         <tr>
-                            <td><a href="http://steamcommunity.com/profiles/76561198041110910">Ivoh (Evo)</a></td>
+                            <td><a href="http://steamcommunity.com/profiles/76561198041110910">Evo</a></td>
                             <td>No one expects the dutch inquisition</td>
+                        </tr>
+                        <tr>
+                            <td><a href="http://steamcommunity.com/id/mrdolf">Alto</a></td>
+                            <td>Initiation barely lasted a minute, but still lasted longer than Hats in a trout</td>
                         </tr>
                     </tbody>
                 </table>
@@ -166,9 +170,28 @@
         </div>
     </div>
     <script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip(); 
-    });
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip(); 
+        });
+
+        let url = 'https://canary.discordapp.com/api/guilds/172425299559055381/widget.json';
+
+        fetch(url)
+        .then(res => res.json())
+        .then((out) => {
+            inVoice = 0;
+            console.log(out);
+            document.getElementById("memberCount").innerHTML = out["members"].length;
+            for (i = 0; i < out["members"].length; i++) {
+                if ("channel_id" in out["members"][i]) {
+                    inVoice += 1;
+                }
+            }
+            document.getElementById("voiceCount").innerHTML = inVoice;
+        })
+        .catch(err => { throw err });
+
+        
     </script>
 </body>
 </html>
