@@ -66,18 +66,22 @@ h1, h2, h3, h4, h5, h6 {
 
 a:link {
     color: white;
+    font-style: italic;
 }
 
 a:visited {
     color: white;
+    font-style: italic;
 }
 
 a:hover {
     color: white;
+    font-style: italic;
 }
 
 a:active {
     color: white;
+    font-style: italic;
 }
 
 b, strong {
