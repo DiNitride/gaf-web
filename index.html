@@ -117,8 +117,21 @@
                     Whitelisted Minecraft Server - <code>mc.neverendinggaf.com</code><br>
                     Rust Server - <code>Coming soon</code><br>
                 </p>
-    
                 
+                <h3>Upcoming Events</h3>
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Channel</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="events">
+
+                    </tbody>
+                </table>
             </div>
             <div class="col-md-2">
             </div>
@@ -207,6 +220,25 @@
         </div>
     </div>
     <script>
+        
+        var token_url_string = window.location.href
+        var token_url = new URL(token_url_string);
+        var token = token_url.searchParams.get("token")
+        if (token != null) {
+            console.log("Token from url " + token)
+            localStorage.setItem("gaf_api_token", token)
+        } else {
+            console.log("No token in URL")
+        }
+        
+        console.log("Getting token from Storage")
+        token = localStorage.getItem("gaf_api_token")
+        if (token != null) {
+            console.log("User is authenticated with token " + token)
+        } else {
+            console.log("No token found, user is not authenticated")
+        }
+        
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip(); 
         });
@@ -227,6 +259,17 @@
             document.getElementById("voiceCount").innerHTML = inVoice;
         })
         .catch(err => { throw err });  
+
+        fetch("http://www.neverendinggaf.com/api/v1/calendar/events")
+        .then(res => res.json())
+        .then((out) => {
+            console.log(out)
+            for (i = 0; i < out["events"].length; i++) {
+                document.getElementById("events").innerHTML += "<tr><td>" + out["events"][i]["name"] + "</td><td>" + out["events"][i]["channel"] + "</td><td>" + out["events"][i]["startTime"] + "</td><td>" + out["events"][i]["endTime"] + "</td>"
+            }
+            
+        })
+        
     </script>
 </body>
 </html>
