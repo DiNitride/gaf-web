@@ -266,10 +266,13 @@
         .then(res => res.json())
         .then((out) => {
             console.log(out)
-            for (i = 0; i < out["events"].length; i++) {
-                document.getElementById("events").innerHTML += "<tr><td>" + out["events"][i]["name"] + "</td><td>" + out["events"][i]["channel"] + "</td><td>" + out["events"][i]["startTime"] + "</td><td>" + out["events"][i]["endTime"] + "</td>"
-            }
-            
+            if (out["events"].length == 0) {
+                document.getElementById("events").innerHTML += "<h1>No upcoming events</h1>"
+            } else {
+                for (i = 0; i < out["events"].length; i++) {
+                    document.getElementById("events").innerHTML += "<tr><td>" + out["events"][i]["name"] + "</td><td>" + out["events"][i]["channel"] + "</td><td>" + out["events"][i]["startTime"] + "</td><td>" + out["events"][i]["endTime"] + "</td>"
+                }
+            }     
         })
         
     </script>
