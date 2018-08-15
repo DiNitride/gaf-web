@@ -45,3 +45,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+\.idea/
+
+node_modules
+dist
+js
+
+yarn-error.log
+package-lock.json
