@@ -14,10 +14,10 @@
     name: "social-links",
     data () {
       return {
-        youtube: 'color: #FF0000',
-        twitch: 'color: #6441A4',
-        twitter: 'color: #00aced',
-        steam: 'color: #000000',
+        Youtube: 'color: #FF0000',
+        Twitch: 'color: #6441A4',
+        Twitter: 'color: #00aced',
+        Steam: 'color: #000000',
         members: members
       }
     },

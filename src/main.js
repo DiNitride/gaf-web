@@ -15,16 +15,18 @@ import faSolid from '@fortawesome/fontawesome-free-solid';
 import faRegular from '@fortawesome/fontawesome-free-regular';
 import faBrands from '@fortawesome/fontawesome-free-brands';
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import vueHeadful from 'vue-headful';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
-Vue.use(BootstrapVue)
+Vue.use(BootstrapVue);
 
-fontAwesome.library.add(faSolid)
-fontAwesome.library.add(faRegular)
-fontAwesome.library.add(faBrands)
+fontAwesome.library.add(faSolid);
+fontAwesome.library.add(faRegular);
+fontAwesome.library.add(faBrands);
 
-Vue.component('fa-icon', FontAwesomeIcon)
+Vue.component('fa-icon', FontAwesomeIcon);
+Vue.component('vue-headful', vueHeadful);
 
 /* eslint-disable no-new */
 new Vue({
@@ -32,4 +34,4 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
-})
+});

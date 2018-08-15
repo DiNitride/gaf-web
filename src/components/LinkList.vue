@@ -16,12 +16,9 @@
           "Discord Server": "http://discord.neverendinggaf.com/",
           "Steam Group": "http://steam.neverendinggaf.com/",
           "Public Steam Group": "http://steamcommunity.com/groups/publicgaf",
-          "Current list of Steam Keys we have in our pool for giveaways or competition prizes": "https://docs.google.com/spreadsheets/d/1PM_rfIb-ule9PTVjEhCSukG5zZZqgwzIFLkYEsXmmAw/edit?usp=sharing",
           "GTA V Crew": "https://socialclub.rockstargames.com/crew/the_never_ending_gaf",
-          "Destiny 2 Clan": "https://www.bungie.net/en/ClanV2/Chat?groupId=2118940",
           "Arma 3 Squad Information": "arma",
           "Teamspeak Server": "ts3server://ts.neverendinggaf.com",
-          "Good Discord Etiquette": "http://www.neverendinggaf.com/discord_etiquette.html",
         }
       }
     },

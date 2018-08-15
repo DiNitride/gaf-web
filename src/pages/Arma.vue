@@ -1,5 +1,6 @@
 <template>
   <div class="row">
+    <vue-headful title="Arma 3 Squad"/>
     <div class="col-8 offset-2 text-left">
       <router-link to="home"><fa-icon :icon="['fa', 'arrow-left']"></fa-icon> Back</router-link>
       <h2 class="text-center">
