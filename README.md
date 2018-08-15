@@ -1,4 +1,4 @@
-# gaf-website
+# Never Ending GAF Website
 
 > VueJS for the GAFs
 
@@ -37,3 +37,23 @@ yarn test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## NGINX Config
+
+```
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/NeverEndingGAF/web/dist;
+        server_name www.neverendinggaf.com;
+
+        index index.html;
+
+        error_page 404 /index.html;
+
+        location / {
+        }
+
+}
+```
