@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Never Ending GAF</title>
+    <meta charset="utf-8">
+    <meta name="description" content="The Never Ending GAF">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Author" content="DiNitride">
+    <link type="text/plain" rel="author" href="http://domain/humans.txt" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="icon" href="graphics/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    <div id="eu" style="width:100%; height:500px;"></div>
+    <div id="world" style="width:100%; height:500px;"></div>
+</body>
+<script>
+    var data_world = [
+	{
+		"code": "AU",
+		"value": 1,
+		"name": "Australia"
+	},
+	{
+		"code": "AT",
+		"value": 1,
+		"name": "Austria"
+	},
+	{
+		"code": "DK",
+		"value": 1,
+		"name": "Denmark"
+	},
+	{
+		"code": "EE",
+		"value": 1,
+		"name": "Estonia"
+	},
+	{
+		"code": "IE",
+		"value": 1,
+		"name": "Ireland"
+	},
+	{
+		"code": "NL",
+		"value": 4,
+		"name": "Netherlands"
+	}, 
+	{
+		"code": "RO",
+		"value": 1,
+		"name": "Romania"
+	},
+	{
+		"code": "SA",
+		"value": 1,
+		"name": "Saudi Arabia"
+	},
+	{
+		"code": "RS",
+		"value": 1,
+		"name": "Serbia"
+	},
+	{
+		"code": "SG",
+		"value": 1,
+		"name": "Singapore"
+	},
+	{
+		"code": "ES",
+		"value": 1,
+		"name": "Spain"
+	},
+	{
+		"code": "SE",
+		"value": 3,
+		"name": "Sweden"
+	},
+	{
+		"code": "GB",
+		"value": 11,
+		"name": "United Kingdom"
+	},
+	{
+		"code": "US",
+		"value": 2,
+		"name": "United States"
+	}
+];
+    
+var data_eu = [
+	{
+		"code": "AT",
+		"value": 1,
+		"name": "Austria"
+	},
+	{
+		"code": "DK",
+		"value": 1,
+		"name": "Denmark"
+	},
+	{
+		"code": "EE",
+		"value": 1,
+		"name": "Estonia"
+	},
+	{
+		"code": "IE",
+		"value": 1,
+		"name": "Ireland"
+	},
+	{
+		"code": "NL",
+		"value": 4,
+		"name": "Netherlands"
+	}, 
+	{
+		"code": "RO",
+		"value": 1,
+		"name": "Romania"
+	},
+	{
+		"code": "RS",
+		"value": 1,
+		"name": "Serbia"
+	},
+	{
+		"code": "SE",
+		"value": 3,
+		"name": "Sweden"
+	},
+	{
+		"code": "GB",
+		"value": 11,
+		"name": "United Kingdom"
+	}
+];
+    
+    $.getJSON('http://code.highcharts.com/mapdata/custom/world.geo.json', function (worldjson) {
+
+        // Initiate the chart
+        Highcharts.mapChart('world', {
+            chart: {
+                map: worldjson
+            },
+
+            title: {
+                text: 'Accross the world'
+            },
+
+            mapNavigation: {
+                enabled: true,
+                buttonOptions: {
+                    verticalAlign: 'bottom'
+                }
+            },
+
+            colorAxis: {
+            min: 1,
+            max: 5,
+            type: 'logarithmic',
+            minColor: '#81a2e2'
+        },
+
+            series: [{
+                data: data_world,
+                joinBy: ['iso-a2', 'code'],
+                name: 'Active Members',
+                states: {
+                    hover: {
+                        color: '#a4edba'
+                    }
+                },
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.properties.postal}'
+                }
+            }]
+        });
+    });
+    
+    $.getJSON('http://code.highcharts.com/mapdata/custom/europe.geo.json', function (eujson) {
+
+        // Initiate the chart
+        Highcharts.mapChart('eu', {
+            chart: {
+                map: eujson
+            },
+
+            title: {
+                text: 'Where is GAF located?'
+            },
+
+            mapNavigation: {
+                enabled: true,
+                buttonOptions: {
+                    verticalAlign: 'bottom'
+                }
+            },
+
+            colorAxis: {
+            min: 1,
+            max: 5,
+            type: 'logarithmic',
+            minColor: '#81a2e2'
+        },
+
+            series: [{
+                data: data_eu,
+                joinBy: ['iso-a2', 'code'],
+                name: 'Active Members',
+                states: {
+                    hover: {
+                        color: '#a4edba'
+                    }
+                },
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.properties.postal}'
+                }
+            }]
+        });
+    });
+    
+    
+    
+    
+    
+</script>
+</html>
