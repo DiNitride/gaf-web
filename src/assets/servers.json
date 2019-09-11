@@ -1,26 +1,7 @@
 {
-  "skyfactory": {
-    "name": "Minecraft Skyfactory 3 Modpack",
-    "ip": "skyfactory.mc.neverendinggaf.com"
-  },
-  "revulution": {
-    "name": "Minecraft Revulution Modpack",
-    "ip": "rev.mc.neverendinggaf.com"
-  },
-  "arma3_lib": {
-    "name": "Arma 3 Tanoa Liberation",
-    "ip": "liberation.arma.neverendinggaf.com"
-  },
-  "starbound": {
-    "name": "Starbound",
-    "ip": "starbound.neverendinggaf.com"
-  },
-  "spaceengineers": {
-    "name": "Space Engineers",
-    "ip": "space.neverendinggaf.com"
-  },
-  "factorio": {
-    "name": "Factorio",
-    "ip": "factorio.neverendinggaf.com"
+  "slut_bucket": {
+    "name": "The Slut Bucket (Whitelisted Minecraft)",
+    "ip": "slutbucket.neverendinggaf.com",
+    "site": "http://slutbucket.neverendinggaf.com"
   }
 }

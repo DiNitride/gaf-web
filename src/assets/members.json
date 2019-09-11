@@ -6,7 +6,7 @@
       "Twitter": "https://Twitter.com/di_nitride",
       "Steam": "http://Steamcommunity.com/id/DiNitride/"
     },
-    "tagline": "The Glorious Leader"
+    "tagline": "The Glorious Leader, but I'm not responsible for any of these idiots okay"
   },
   "Mr Bird Jesus": {
     "social": {
@@ -54,12 +54,6 @@
       "Steam": "http://Steamcommunity.com/profiles/76561198082927688/"
     },
     "tagline": "The Carponizer Carp Calendar King"
-  },
-  "Rust": {
-    "social": {
-      "Steam": "http://Steamcommunity.com/profiles/76561198070079658/"
-    },
-    "tagline": "Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety"
   },
   "Voltzlad": {
     "social": {
@@ -116,5 +110,24 @@
       "Steam": "http://Steamcommunity.com/profiles/76561197963471901/"
     },
     "tagline": "Meet the dad who quit his job to run a Minecraft server for autistic kids"
+  },
+  "Vizual": {
+    "social": {
+      "Steam": "https://steamcommunity.com/profiles/76561198070658572/",
+      "Twitter": "https://twitter.com/Vizual_vx"
+		},
+     "tagline": "It's taken 3 years but he's finally part of the autistic mob"
+  },
+  "offbeatwitch": {
+    "social": {
+      "Steam": "https://steamcommunity.com/profiles/76561198053786495/"
+    },
+    "tagline": "Honestly we added gave him the role by accident once and just decided to let him keep it"
+  },
+  "Lars": {
+    "social": {
+      "Steam": "https://steamcommunity.com/profiles/76561198080310970"
+    },
+    "tagline": "Almost as good at disapearing for 2 years as he is falling off motorbikes"
   }
 }
