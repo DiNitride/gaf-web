@@ -18,7 +18,7 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.8",
     "@fortawesome/vue-fontawesome": "^0.0.22",
     "bootstrap": "^4.0.0",
-    "bootstrap-vue": "^2.0.0-rc.2",
+    "bootstrap-vue": "^2.0.0-rc.12",
     "jquery": "^3.3.1",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
