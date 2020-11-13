@@ -1,6 +1,10 @@
 <template>
   <div class="row">
     <div class="col-8 offset-2 text-left">
+      <div class="video">
+        <div class="video_text"><span>Latest highlights!</span></div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9L2R5oxdPqA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
       <p>
         <strong>Idiots online: </strong> <online-count></online-count>
         <br>

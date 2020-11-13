@@ -95,3 +95,14 @@ img {
     max-width: 100%;
 }
 
+.video {
+  margin: auto;
+  width: 560px;
+  padding: 20px 0px;
+}
+
+.video_text {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
